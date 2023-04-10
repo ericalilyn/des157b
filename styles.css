@@ -3,15 +3,15 @@
 }
 
 body {
-    background-color: #333;
-    color: rgb(235, 235, 235);
+    background-color: rgb(17, 17, 17);
+    color: lavenderblush;
     transition: all 2s;
-    font-family: 'Source Code Pro', sans-serif;
+    font-family: 'Unbounded', serif;
 }
 
 body.switch {
-    background-color: rgb(235, 235, 235);
-    color: #333;
+    background-color: #472e3b;
+    color: rgb(216, 152, 132);
 }
 
 #container {
@@ -24,8 +24,23 @@ body.switch {
     padding-top: 2em;
 }
 
+span
+{
+    display: flex;
+    justify-content: space-between;
+    width: 1100px;
+    margin: auto;
+}
+
+h2
+{
+    position: relative;
+    top: 10px;
+}
+
 header {
     margin: 0 auto 2em auto;
+    font-style: italic;
 }
 
 #banner {
@@ -34,16 +49,17 @@ header {
     width: 1100px;
     height: 250px;
     margin: auto;
-    background-color: rgb(235, 235, 235);
+    background-image: url(images/IMG_3350.JPG);
     color: #333;
-    overflow: hidden;
+    border: 5px lavenderblush ridge;
+    /* overflow: hidden; */
     display: grid;
 	place-items: center;
 }
 
 #banner.switch {
-    background-color: #333;
-    color: rgb(235, 235, 235);
+    background-image: url(images/IMG_3350_raw.JPG);
+    border: 5px rgb(216, 152, 132) ridge;
     transition: all 2s;
 }
 
@@ -54,10 +70,15 @@ main {
 }
 
 main section {
-    width: 25%;
-    border: 1px rgb(235, 235, 235) dashed;
+    width: 20%;
+    border: 5px lavenderblush ridge;
     margin: 0 .25em;
     padding: 1em;
+}
+
+main section.switch
+{
+    border: 5px rgb(216, 152, 132) ridge;
 }
 
 a {
@@ -79,44 +100,54 @@ section a {
     line-height: 1.1em;
     display: inline-block;
     padding: .5em;
-    color: orange;
+    color: rgb(177, 177, 177);
 }
 
 section a:hover {
-    background-color: orange;
+    background-color: lavenderblush;
     color: #333;
 }
 
 section.switch a {
-    color: #333;
+    color: rgb(181, 120, 120);
 }
 
 section.switch a:hover {
-    background-color: #333;
-    color: rgb(235, 235, 235);
+    background-color: rgb(216, 152, 132);    
+    color: rgb(112, 77, 77);
 }
 
 button {
     position: absolute;
-    top: 20px;
+    top: 5px;
     right: 20px;
     padding: 12px;
-    background-color: orange;
+    background-color: lavenderblush;
     color: #333;
     border: 1px solid transparent;
 }
 
 button:hover {
-    background-color: coral;
+    background-color: rgb(231, 219, 223);
     cursor: pointer;
 }
 
 button.switch {
-    background-color: rgb(235, 235, 235);
-    border-color: #333;
+    background-color: rgb(216, 152, 132);    
+    color: rgb(112, 77, 77);
 }
 
 button.switch:hover {
-    background-color: #333;
-    color: rgb(235, 235, 235)
+    background-color: rgb(193, 136, 119);    
+    color: rgb(112, 77, 77);
+}
+
+.showing
+{
+    visibility: visible;
+}
+
+.hidden
+{
+    visibility: hidden;
 }

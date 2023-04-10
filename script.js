@@ -18,7 +18,7 @@
             mode = 'light';
         } else {
             body.removeAttribute('class');
-            banner.removeAttribute('class');
+            banner.className = 'revert';
             button.removeAttribute('class');
             for (const section of sections) {
                 section.removeAttribute('class');
