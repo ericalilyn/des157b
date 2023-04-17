@@ -63,13 +63,19 @@ header {
     transition: all 2s;
 }
 
+#banner.revert {
+    background-image: url(images/IMG_3350.JPG);
+    border: 5px lavenderblush ridge;
+    transition: all 2s;
+}
+
 main {
     display: flex;
     justify-content: space-evenly;
     margin: 1em auto;
 }
 
-main section {
+main section, main section.revert {
     width: 20%;
     border: 5px lavenderblush ridge;
     margin: 0 .25em;
@@ -79,6 +85,7 @@ main section {
 main section.switch
 {
     border: 5px rgb(216, 152, 132) ridge;
+    transition: all 2s;
 }
 
 a {
@@ -110,6 +117,7 @@ section a:hover {
 
 section.switch a {
     color: rgb(181, 120, 120);
+    transition: all 2s;
 }
 
 section.switch a:hover {
@@ -135,6 +143,7 @@ button:hover {
 button.switch {
     background-color: rgb(216, 152, 132);    
     color: rgb(112, 77, 77);
+    transition: all 2s;
 }
 
 button.switch:hover {

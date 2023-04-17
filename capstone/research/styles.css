@@ -1,0 +1,21 @@
+body {
+    font-family: 'Arsenal';
+    font-weight: 700;
+    background-color: black;
+    color: lavenderblush;
+    overflow: hidden;
+}
+
+section {
+    display: flex;
+    width: 850px;
+    margin: 0 auto;
+    padding: 185px;
+}
+
+p {
+    width: 375px;
+    margin: 0 auto;
+    line-height: 1.5em;
+    align-self: center;
+}
