@@ -6,7 +6,7 @@ body {
     overflow: hidden;
 }
 
-section {
+div {
     display: flex;
     width: 850px;
     margin: 0 auto;

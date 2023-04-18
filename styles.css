@@ -24,7 +24,7 @@ body.switch {
     padding-top: 2em;
 }
 
-span
+#heading
 {
     display: flex;
     justify-content: space-between;
