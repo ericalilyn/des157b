@@ -1,0 +1,74 @@
+body {
+    color: white;
+    font-family: 'Rubik', sans-serif;
+}
+
+#image
+{
+    width: 100vw;
+    height: 70vh;
+    position: fixed;
+    background-image: url("images/car-view.jpg");
+    background-repeat: no-repeat;
+}
+
+#dashboard
+{
+    width: 100vw;
+    height: 50vh;
+    position: fixed;
+    top: 450px;
+    background-color: black;
+}
+
+#interface
+{
+    height: 200px;
+    padding: 25px;
+    border-radius: 5px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgb(23, 23, 23);
+}
+
+#top
+{
+    display: flex;
+    position: relative;
+    top: -25px;
+    justify-content: space-between;
+}
+
+#result, #bar, #controls
+{
+    position: relative;
+    top: -50px;
+}
+#result
+{
+    font-size: 23px;
+    line-height: 33px;
+    padding-bottom: 3px;
+}
+
+#bar
+{
+    width: 500px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+#controls
+{
+    display: flex;
+    gap: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 250%);
+    font-size: 30px;
+}
