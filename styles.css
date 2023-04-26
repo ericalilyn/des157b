@@ -82,8 +82,7 @@ main section, main section.revert {
     padding: 1em;
 }
 
-main section.switch
-{
+main section.switch {
     border: 5px rgb(216, 152, 132) ridge;
     transition: all 2s;
 }
@@ -151,12 +150,10 @@ button.switch:hover {
     color: rgb(112, 77, 77);
 }
 
-.showing
-{
+.showing {
     visibility: visible;
 }
 
-.hidden
-{
+.hidden {
     visibility: hidden;
 }
