@@ -50,12 +50,20 @@ body {
     margin-bottom: -10px;
 }
 
-#bar {
+#bar, #timebar {
     width: 500px;
     height: 10px;
     border-radius: 5px;
     margin-bottom: -10px;
+    background-color: gray;
+    overflow: hidden;
+}
+
+#timebar {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
     background-color: white;
+    visibility: hidden;
 }
 
 #controls {
@@ -74,9 +82,39 @@ body {
     top: -10px;
 }
 
+#forwardbutton, #backbutton {
+    color: gray;
+}
+
 footer {
     z-index: 10;
     position: fixed;
     bottom: 10px;
     right: 33px;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.textappear {
+    animation: appear 1s 1;
+}
+
+@keyframes update {
+    0% {
+        width: 0px;
+    }
+    100% {
+        width: 500px;
+    }
+}
+
+.timecount {
+    animation: update 60s 1;
 }
