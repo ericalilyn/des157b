@@ -1,0 +1,35 @@
+body {
+    font-family: 'Unbounded';
+    font-weight: 700;
+    background-color: black;
+    color: lavenderblush;
+}
+
+div {
+    display: flex;
+    width: 850px;
+    margin: 0 auto;
+    padding: 185px;
+}
+
+h1, p {
+    width: 500px;
+    margin: 0 auto;
+    padding: 10px;
+    align-self: center;
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 28px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 5px lavenderblush ridge;
+}
+
+p {
+    font-family: 'Ysabeau';
+    font-size: 18px;
+    line-height: 1.5em;
+}

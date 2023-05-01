@@ -1,4 +1,5 @@
-body {
+/* original styling */
+/* body {
     font-family: 'Arsenal';
     font-weight: 700;
     background-color: black;
@@ -18,4 +19,55 @@ p {
     margin: 0 auto;
     line-height: 1.5em;
     align-self: center;
+} */
+
+body {
+    font-family: 'Unbounded';
+    font-weight: 700;
+    background-color: black;
+    color: lavenderblush;
+}
+
+div {
+    display: flex;
+    width: 850px;
+    margin: 0 auto;
+    padding: 185px;
+    gap: 20px;
+}
+
+h1, h2, p, section {
+    width: 500px;
+    margin: 0 auto;
+    padding: 10px;
+    align-self: center;
+}
+
+section {
+    width: 650px;
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 28px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 5px lavenderblush ridge;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+p {
+    font-family: 'Ysabeau';
+    font-size: 18px;
+    line-height: 1.5em;
+}
+
+img {
+    width: 200px;
+    margin-left: 10px;
 }
