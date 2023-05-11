@@ -5,11 +5,12 @@ body {
     color: lavenderblush;
 }
 
-div {
+#container {
     display: flex;
     width: 850px;
     margin: 0 auto;
-    padding: 185px;
+    gap: 20px;
+    padding-top: 125px;
 }
 
 h1, p {
@@ -32,4 +33,10 @@ p {
     font-family: 'Ysabeau';
     font-size: 18px;
     line-height: 1.5em;
+}
+
+img {
+    display: flex;
+    width: 420px;
+    margin: 0 auto;
 }

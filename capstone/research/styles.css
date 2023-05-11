@@ -28,12 +28,12 @@ body {
     color: lavenderblush;
 }
 
-div {
+#container {
     display: flex;
     width: 850px;
     margin: 0 auto;
-    padding: 185px;
     gap: 20px;
+    padding-top: 125px;
 }
 
 h1, h2, p, section {
@@ -44,7 +44,14 @@ h1, h2, p, section {
 }
 
 section {
-    width: 650px;
+    display: flex;
+    width: 1150px;
+    gap: 20px;
+    padding-top: 100px;
+}
+
+#section2 {
+    padding-bottom: 100px;
 }
 
 h1 {
@@ -67,7 +74,20 @@ p {
     line-height: 1.5em;
 }
 
-img {
-    width: 200px;
+#image {
+    width: 400px;
     margin-left: 10px;
+}
+
+.image-div {
+    display: flex;
+}
+
+.image-row {
+    width: 175px;
+    margin-left: 10px;
+}
+
+.text-div {
+    align-self: center;
 }
