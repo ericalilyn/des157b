@@ -28,31 +28,71 @@ body {
     color: lavenderblush;
 }
 
-#container {
-    display: flex;
-    width: 850px;
-    margin: 0 auto;
-    gap: 20px;
-    padding-top: 125px;
-}
-
-h1, h2, p, section, ul {
+h1, h2, h4, p, section, ul, ol {
     width: 500px;
     margin: 0 auto;
     padding: 10px;
     align-self: center;
 }
 
-section {
+.container {
     display: flex;
-    width: 1150px;
+    width: 850px;
+    margin: 0 auto;
     gap: 20px;
-    padding-top: 100px;
-    padding-left: 55px;
 }
 
-#section2 {
-    padding-bottom: 100px;
+.text-container {
+    display: flex;
+    width: 1100px;
+    gap: 20px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    border: 5px lavenderblush ridge;
+}
+
+section {
+    display: flex;
+    width: 1100px;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.text-div {
+    padding: 20px;
+}
+
+.image-div {
+    display: flex;
+}
+
+#small-container {
+    margin-top: 150px;
+}
+
+#mid-container {
+    margin-top: 85px;
+}
+
+#left-div p, #left-div ol, #left-div ul {
+    width: 450px;
+}
+
+#right-div {
+    padding-left: 0px;
+}
+
+#right-div p {
+    width: 450px;
+}
+
+#image {
+    width: 400px;
+}
+
+.image-row {
+    width: 175px;
+    border: 5px lavenderblush ridge;
 }
 
 h1 {
@@ -61,7 +101,7 @@ h1 {
     font-size: 28px;
     margin-top: 20px;
     margin-bottom: 20px;
-    border: 5px lavenderblush ridge;
+    width: 800px;
 }
 
 h2 {
@@ -69,33 +109,45 @@ h2 {
     margin-bottom: 10px;
 }
 
-p, li {
+.citation {
+    width: 475px;
+    height: 150px;
+    padding: 20px;
+    margin-left: 25px;
+    align-self: center;
+    border: 5px lavenderblush ridge;
+}
+
+#source2 h3 {
+    height: 172px;
+}
+
+#source3 h3 {
+    height: 130px;
+}
+
+p, li, ol {
     font-family: 'Ysabeau';
     font-size: 18px;
     line-height: 1.5em;
 }
 
-#image {
-    width: 400px;
-    margin-left: 10px;
+li {
+    margin-left: 20px;
+}
+
+a, a:visited {
+    color: lavenderblush;
+}
+
+.border {
     border: 5px lavenderblush ridge;
 }
 
-.image-div {
-    display: flex;
+.divider {
+    border-right: 5px lavenderblush ridge;
 }
 
-.image-row {
-    width: 175px;
-    margin-left: 10px;
-    border: 5px lavenderblush ridge;
-}
-
-.text-div {
+.center {
     align-self: center;
-}
-
-.text-container {
-    position: relative;
-    top: 100px;
 }
