@@ -36,7 +36,7 @@ body {
     padding-top: 125px;
 }
 
-h1, h2, p, section {
+h1, h2, p, section, ul {
     width: 500px;
     margin: 0 auto;
     padding: 10px;
@@ -48,6 +48,7 @@ section {
     width: 1150px;
     gap: 20px;
     padding-top: 100px;
+    padding-left: 55px;
 }
 
 #section2 {
@@ -68,7 +69,7 @@ h2 {
     margin-bottom: 10px;
 }
 
-p {
+p, li {
     font-family: 'Ysabeau';
     font-size: 18px;
     line-height: 1.5em;
@@ -77,6 +78,7 @@ p {
 #image {
     width: 400px;
     margin-left: 10px;
+    border: 5px lavenderblush ridge;
 }
 
 .image-div {
@@ -86,8 +88,14 @@ p {
 .image-row {
     width: 175px;
     margin-left: 10px;
+    border: 5px lavenderblush ridge;
 }
 
 .text-div {
     align-self: center;
+}
+
+.text-container {
+    position: relative;
+    top: 100px;
 }

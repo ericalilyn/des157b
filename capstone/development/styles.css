@@ -39,4 +39,5 @@ img {
     display: flex;
     width: 420px;
     margin: 0 auto;
+    border: 5px lavenderblush ridge;
 }
