@@ -38,8 +38,8 @@ h1, h2, h4, p, section, ul, ol {
 .container {
     display: flex;
     width: 850px;
+    gap: 5px;
     margin: 0 auto;
-    gap: 20px;
 }
 
 .text-container {
@@ -97,25 +97,11 @@ section {
     border: 5px lavenderblush ridge;
 }
 
-h1 {
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 28px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width: 800px;
-}
-
-h2 {
-    text-align: center;
-    margin-bottom: 10px;
-}
-
 .citation {
     width: 475px;
     height: 150px;
     padding: 20px;
-    margin-left: 25px;
+    margin-left: 20px;
     align-self: center;
     border: 5px lavenderblush ridge;
 }
@@ -126,6 +112,19 @@ h2 {
 
 #source3 h3 {
     height: 130px;
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 28px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 p, li, ol {
@@ -152,6 +151,10 @@ a, a:visited {
 
 .center {
     align-self: center;
+}
+
+.padding {
+    padding: 20px;
 }
 
 .adjust {
