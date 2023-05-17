@@ -75,15 +75,18 @@ main {
     margin: 1em auto;
 }
 
-main section, main section.revert {
-    width: 20%;
+section {
+    width: 23%;
     border: 5px lavenderblush ridge;
+    color: lavenderblush;
     margin: 0 .25em;
     padding: 1em;
+    transition: all 2s;
 }
 
-main section.switch {
+section.switch {
     border: 5px rgb(216, 152, 132) ridge;
+    color: rgb(216, 152, 132);
     transition: all 2s;
 }
 
@@ -107,6 +110,7 @@ section a {
     display: inline-block;
     padding: .5em;
     color: rgb(177, 177, 177);
+    transition: all 2s;
 }
 
 section a:hover {
@@ -135,13 +139,18 @@ button {
 }
 
 button:hover {
-    background-color: rgb(231, 219, 223);
     cursor: pointer;
 }
 
 button.switch {
     background-color: rgb(216, 152, 132);    
     color: rgb(112, 77, 77);
+    transition: all 2s;
+}
+
+button.revert {
+    background-color: lavenderblush;    
+    color: #333;
     transition: all 2s;
 }
 

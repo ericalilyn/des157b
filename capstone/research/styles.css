@@ -55,6 +55,7 @@ section {
     display: flex;
     width: 1100px;
     gap: 20px;
+    padding: 20px;
     margin-bottom: 30px;
 }
 
@@ -64,6 +65,7 @@ section {
 
 .image-div {
     display: flex;
+    gap: 7px;
 }
 
 #small-container {
@@ -150,4 +152,8 @@ a, a:visited {
 
 .center {
     align-self: center;
+}
+
+.adjust {
+    padding: 0;
 }

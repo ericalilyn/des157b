@@ -19,7 +19,7 @@
         } else {
             body.removeAttribute('class');
             banner.className = 'revert';
-            button.removeAttribute('class');
+            button.className = 'revert';
             for (const section of sections) {
                 section.removeAttribute('class');
             }
