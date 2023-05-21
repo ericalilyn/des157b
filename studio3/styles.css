@@ -1,0 +1,173 @@
+body {
+    background-color: rgb(180, 103, 73);
+    font-family: 'Josefin Sans';
+}
+
+label, input, button, img, #reveal, #display, #sketch, #screenshot, #paper, #note, footer {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: drop-shadow(5px 5px 3px rgb(97, 56, 39));
+}
+
+label, input {
+    left: 15%;
+    margin-bottom: 1em;
+    filter: none;
+}
+
+input {
+    font-size: 20px;
+}
+
+#file-upload {
+    top: 10%;
+    left: 25.65%;
+}
+
+#file-submit {
+    top: 20%;
+    left: 14%;
+}
+
+input:hover, button:hover {
+    cursor: pointer;;
+}
+
+button {
+    display: flex;
+    font-size: 20px;
+    top: 18%;
+    left: 88%;
+    gap: 20px;
+    filter: none;
+}
+
+#new {
+    top: 10%;
+}
+
+#save {
+    top: 20%;
+}
+
+#reveal img, #display img {
+    background-color: white;
+    border-radius: 3px;
+}
+
+#reveal img {
+    padding: 15px;
+    padding-top: 30px;
+    padding-bottom: 60px;
+}
+
+#display img {
+    padding: 30px;
+    padding-top: 60px;
+    padding-bottom: 120px;
+}
+
+#sketch {
+    top: 50.5%;
+    filter: none;
+}
+
+#display, #screenshot {
+    width: 360px;
+    height: 580px;
+    top: 55%;
+    left: 55%;
+    z-index: 1;
+}
+
+#reveal {
+    width: 173px;
+    height: 281px;
+    top: 68%;
+    left: 20%;
+    z-index: 3;
+}
+
+#display:hover {
+    cursor: pointer;
+}
+
+#screenshot {
+    z-index: 4;
+}
+
+#paper {
+    background-color: floralwhite;
+    width: 400px;
+    padding: 50px;
+    padding-top: 20px;
+    padding-bottom: 600px;
+    left: 55%;
+    z-index: 2;
+}
+
+#note {
+    background-color: pink ;
+    width: 200px;
+    padding: 20px;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    top: 35%;
+    left: 88%;
+    z-index: 3;
+}
+
+h1, h2 {
+    font-family: 'Gochi Hand';
+    margin-top: 0;
+}
+
+#camera {
+    width: 375px;
+    top: 72%;
+    left: 17%;
+    z-index: 3;
+}
+
+#marker {
+    width: 90px;
+    top: 43%;
+    left: 86%;
+    transform: rotate(20deg);
+    z-index: 3;
+}
+
+footer {
+    top: 93%;
+    left: 93%;
+    filter: none;
+}
+
+.showing {
+    visibility: visible;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.animate {
+    animation: 4s 1 normal output;
+    animation-play-state: running;
+}
+
+.reset {
+    top: 68%;
+}
+
+@keyframes output {
+    from {
+        top: 68%;
+    }
+    to {
+        top: 45%;
+    }
+}

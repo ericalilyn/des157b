@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erica's Library Liberty</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Josefin+Sans&display=swap" rel="stylesheet">    <link href="styles.css" rel="stylesheet">
+    
+    <!--/ /-------- Parse Library --------/ /-->
+    <script src="https://npmcdn.com/parse/dist/parse.min.js"></script>
+    <!--/ /-------- Jimp Library --------/ /-->
+     <script src="https://unpkg.com/jimp@0.14.0/browser/lib/jimp.js"></script>
+    <!--/ /-------- p5 Library --------/ /-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+    <!--/ /-------- html2canvas Library --------/ /-->
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.5/dist/html2canvas.min.js"></script>
+    
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main>
+        <form id="upload" class="showing">
+            <!-- <label for="file-upload">Upload a Photo</label> -->
+            <input type="file" id="file-upload" accept=".png, .jpg, .jpeg">
+        
+            <input type="submit" id="file-submit" value="Convert Photo">
+        </form>
+        <button id="new">New Photo</button>
+        <button id="save">Save Photo</button>
+        <div id="reveal" class="showing">
+            <img src="">
+        </div>
+        <div id="display">
+            <img src=""></img>
+            <div id="sketch" class="showing"></div>
+        </div>
+        <div id="screenshot"></div>
+        <div id="paper">
+            <h1>Create polaroid style photos and write or doodle on them!</h1>
+        </div>
+        <div id="note" class="hidden">
+            <h2>Click on the photo to see it in full view</h2>
+        </div>
+        <img id="camera" src="images/polaroid-camera.png" alt="polaroid camera">
+        <img id="marker" src="images/sharpie-marker.png" alt="sharpie marker">
+    </main>
+    <footer>
+        <p><a href="sources.html">Sources</a></p>
+    </footer>
+</body>
+</html>
