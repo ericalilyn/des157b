@@ -45,6 +45,7 @@ Parse.serverURL = 'https://parseapi.back4app.com/';
                 setInterval(savedSketch, 500);
             }
             
+            document.querySelector('#reveal').className = 'reset';
             document.querySelector('#note').className = 'showing';
             document.querySelector('#note').innerHTML = `<h2>Photo is saved (right click on it to get a copy)</h2>`;
         })
@@ -140,6 +141,8 @@ Parse.serverURL = 'https://parseapi.back4app.com/';
         html2canvas(photoToSave, {proxy: window.fileAsDataURL}).then(function(canvas) {
             document.getElementById('screenshot').appendChild(canvas);
         });
+
+        document.getElementById('screenshot').style.cursor = 'default';
     }
 
     function savedSketch() {
