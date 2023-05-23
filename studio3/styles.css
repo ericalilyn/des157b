@@ -3,7 +3,7 @@ body {
     font-family: 'Josefin Sans';
 }
 
-label, input, button, img, #reveal, #display, #sketch, #screenshot, #paper, #note, footer {
+input, button, img, #reveal, #display, #sketch, #screenshot, #paper, #note, footer {
     display: block;
     position: fixed;
     top: 50%;
@@ -12,14 +12,11 @@ label, input, button, img, #reveal, #display, #sketch, #screenshot, #paper, #not
     filter: drop-shadow(5px 5px 3px rgb(97, 56, 39));
 }
 
-label, input {
+input {
+    font-size: 20px;
     left: 15%;
     margin-bottom: 1em;
     filter: none;
-}
-
-input {
-    font-size: 20px;
 }
 
 #file-upload {
@@ -32,8 +29,8 @@ input {
     left: 14%;
 }
 
-input:hover, button:hover {
-    cursor: pointer;;
+#file-upload:hover, #file-submit:hover, button:hover, #reveal:hover {
+    cursor: pointer;
 }
 
 button {
