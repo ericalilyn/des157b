@@ -31,6 +31,7 @@ Parse.serverURL = 'https://parseapi.back4app.com/';
             event.preventDefault();
             
             document.querySelector('#display').style.zIndex = '3';
+            document.querySelector('#screenshot').style.cursor = 'crosshair';
             document.querySelector('#note').className = 'showing';
             document.querySelector('#note').innerHTML = `<h2>Decorate the photo and save your work</h2>`;
             hideReveal();
@@ -44,7 +45,7 @@ Parse.serverURL = 'https://parseapi.back4app.com/';
                 savePhoto();
                 setInterval(savedSketch, 500);
             }
-            
+
             document.querySelector('#reveal').className = 'reset';
             document.querySelector('#note').className = 'showing';
             document.querySelector('#note').innerHTML = `<h2>Photo is saved (right click on it to get a copy)</h2>`;
@@ -136,15 +137,15 @@ Parse.serverURL = 'https://parseapi.back4app.com/';
     }
 
     function savePhoto() {
-        let photoToSave = document.getElementById('display');
+        let photoToSave = document.querySelector('#display');
         
         html2canvas(photoToSave, {proxy: window.fileAsDataURL}).then(function(canvas) {
-            document.getElementById('screenshot').appendChild(canvas);
+            document.querySelector('#screenshot').appendChild(canvas);
         });
 
-        document.getElementById('screenshot').style.cursor = 'default';
+        document.querySelector('#screenshot').style.cursor = 'default';
     }
 
     function savedSketch() {
-        document.getElementById('sketch').className = 'hidden';
+        document.querySelector('#sketch').className = 'hidden';
     }

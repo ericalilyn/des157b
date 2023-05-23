@@ -88,10 +88,6 @@ button {
     z-index: 3;
 }
 
-#screenshot:hover {
-    cursor: crosshair;
-}
-
 #screenshot {
     z-index: 4;
 }
