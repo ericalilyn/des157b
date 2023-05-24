@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Functions</title>
+    <style>
+        html {
+            background-color: #efefef;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #333;
+            line-height: 1.4em;
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        code {
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>Conjunction Junction Function</h1>
+
+    <p>I had the Conjunction Junction song stuck in my head and thought it'd be fun to make a function that outputs a random lyric from it.</p>
+
+    <h2>Named Function</h2>
+    <code>
+        <pre>
+            <strong>
+            function(parameter){
+                Do something();
+            }
+            </strong>
+
+            function randomLyrics(lyrics) {
+                const randomIndex = Math.floor(Math.random() * lyrics.length);
+                return lyrics[randomIndex];
+            }
+
+            const songLyrics = [
+                "Hooking up words and phrases and clauses",
+                "Hooking up two boxcars and making 'em run right",
+                "Hooking up two cars to one when you say something like this choice",
+                "Hooking up phrases and clauses that balance",
+                "Hooking up words and phrases and clauses in complex sentences",
+                "Hooking up cars and making 'em function"];
+
+            console.log(`Conjunction Junction, what's your function? ${randomLyrics(songLyrics)}`);
+        </pre>
+    </code>
+
+    <h2>Function Expression</h2>
+    <code>
+        <pre>
+            <strong>
+            const aVariable = function(parameter){
+                Do something();
+            }
+            </strong>
+
+            const randomLyrics = function(lyrics) {
+                const randomIndex = Math.floor(Math.random() * lyrics.length);
+                return lyrics[randomIndex];
+            }
+
+            const songLyrics = [
+                "Hooking up words and phrases and clauses",
+                "Hooking up two boxcars and making 'em run right",
+                "Hooking up two cars to one when you say something like this choice",
+                "Hooking up phrases and clauses that balance",
+                "Hooking up words and phrases and clauses in complex sentences",
+                "Hooking up cars and making 'em function"];
+
+            console.log(`Conjunction Junction, what's your function? ${randomLyrics(songLyrics)}`);
+        </pre>
+    </code>
+
+    <h2>Arrow Function</h2>
+    <code>
+        <pre>
+            <strong>
+            const aVariable = arrow function...{
+            }
+            </strong>
+
+            const randomLyrics = lyrics => {
+                const randomIndex = Math.floor(Math.random() * lyrics.length);
+                return lyrics[randomIndex];
+            }
+   
+            const songLyrics = [
+                "Hooking up words and phrases and clauses",
+                "Hooking up two boxcars and making 'em run right",
+                "Hooking up two cars to one when you say something like this choice",
+                "Hooking up phrases and clauses that balance",
+                "Hooking up words and phrases and clauses in complex sentences",
+                "Hooking up cars and making 'em function"];
+               
+            console.log(`Conjunction Junction, what's your function? ${randomLyrics(songLyrics)}`);
+        </pre>
+    </code>
+
+    <footer> Erica Ng </footer>
+    
+</body>
+</html>

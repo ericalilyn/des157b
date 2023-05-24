@@ -51,6 +51,13 @@ img {
     width: 500px;
 }
 
+.figure {
+    display: block;
+    width: 550px;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+
 .border {
     border: 5px lavenderblush ridge;
 }
