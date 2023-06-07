@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photohistory</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700&display=swap" rel="stylesheet">    
+
+    <link href="location.css" rel="stylesheet">
+    <script src="location.js" defer></script>
+</head>
+<body>
+    <header class="displayed">
+        <h1>「 Photohistory 」</h1>
+        <i class="fas fa-map-location-dot" onclick="location.href='../index.html'"></i>
+    </header>
+    <div id="location-name" class="displayed withmargin">
+        <i class="fas fa-map-marker-alt"></i>
+        <h2>Arboretum GATEway Garden</h2>
+    </div>
+    <div id="location-figure" class="displayed">
+        <img class="portrait" src="../images/gateway.jpg">
+        <figcaption>Rephoto of <a href="https://www.flickr.com/photos/goodlifegarden/34806723063/in/album-72157632927003568/">Photo by Katie Hetrick (2015)</a></figcaption>
+    </div>
+    <div id="location-history" class="displayed">
+        <p id="description">The <strong>Arboretum GATEway Garden</strong> serves as the entrance to the UC Davis Arboretum and connects the campus to downtown Davis. Built in 2014, the garden showcases native plants and bioswales to protect water quality, as well as a bike tunnel mural and art installations. According to the <a href="https://arboretum.ucdavis.edu/arboretum-gateway-garden">UC Davis Arboretum and Public Garden website</a>, the Shovel Gateway sculpture welcomes visitors in and "dovetails with city and campus goals to improve pedestrian and bicycle connections and to promote the campus and downtown area as an arts destination."</p>
+        <h3>Be a Part of <span>Photohistory</span></h3>
+        <p id="instructions">Share your photos/rephotos of the Arboretum Gateway Garden and include any fun facts or history you know about this location.</p>
+        <button>VIEW COMMUNITY PHOTOS</button>
+    </div>
+    <div id="location-gallery" class="removed">
+        <div id="heading">
+            <h3>Community Photos</h3>
+            <button id="add-btn">+ ADD</button>
+        </div>
+        <div class="row">
+            <p id="no-photos" class="removed">There are no photos here yet</p>
+            <div class="column">
+
+            </div>
+            <div class="column">
+                <div class="gallery-image">
+                    <img src="../images/bike.jpg" alt="#">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="location-post" class="removed">
+        <div>
+            <h3></h3>
+            <i class="fas fa-times"></i>
+        </div>
+        <figure>
+            <img src="#" alt="#">
+        </figure>
+        <p></p>
+    </div>
+    <div id="add-photo" class="removed">
+        <div id="form-prompt">
+            <h2>Share Your Photohistory</h2>
+            <p>Join the community survey of the history along the Davis Bike Loop</p>
+        </div>
+        <form id="form-inputs">      
+            <label for="name">Your Name</label>
+            <input type="text" class="textbox" id="name" name="name">
+
+            <label for="caption">Photo Caption</label>
+            <input type="text" class="textbox" id="caption" name="caption">
+            
+            <label for="imgfile">Photo Upload</label>
+            <input type="file" id="imgfile" name="imgfile">
+
+            <input type="submit" value="ADD">
+        </form>
+    </div>
+</body>
+</html>
