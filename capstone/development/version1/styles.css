@@ -224,13 +224,9 @@ input[type="text"] {
     margin-top: 35px;
 }
 
-.textbox[value] {
-    color: #B7B7B7;
-    padding-left: 20px;
-}
-
-.textbox[value]:focus {
+.textbox {
     color: #434343;
+    padding-left: 20px;
 }
 
 input[type="submit"] {
