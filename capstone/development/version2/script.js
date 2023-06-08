@@ -180,7 +180,7 @@
         event.preventDefault();
         //TO ADD: Parse User location boolean true
         if (loc1Key.value.toLowerCase() === 'shovel') {
-            window.location.href = 'http://127.0.0.1:5504/location/arboretum-gateway-garden.html';
+            window.location.href = 'https://ericawithac.github.io/des157b/capstone/development/version2/location/arboretum-gateway-garden.html';
         }
         else {
             loc1Label.className = 'displayed';
@@ -191,7 +191,7 @@
         event.preventDefault();
         //TO ADD: Parse User location boolean true
         if (loc2Key.value.toLowerCase() === 'cow') {
-            window.location.href = 'http://127.0.0.1:5504/location/the-silo.html';
+            window.location.href = 'https://ericawithac.github.io/des157b/capstone/development/version2/location/the-silo.html';
         }
         else {
             loc2Label.className = 'displayed';
@@ -202,7 +202,7 @@
         event.preventDefault();
         //TO ADD: Parse User location boolean true
         if (loc3Key.value.toLowerCase() === '10' || loc3Key.value.toLowerCase() === 'ten') {
-            window.location.href = 'http://127.0.0.1:5504/location/sprocket-bike-tunnel.html';
+            window.location.href = 'https://ericawithac.github.io/des157b/capstone/development/version2/location/sprocket-bike-tunnel.html';
         }
         else {
             loc3Label.className = 'displayed';
@@ -213,7 +213,7 @@
         event.preventDefault();
         //TO ADD: Parse User location boolean true
         if (loc4Key.value.toLowerCase() === 'bike' || loc3Key.value.toLowerCase() === 'bicycle') {
-            window.location.href = 'http://127.0.0.1:5504/location/the-big-bike.html';
+            window.location.href = 'https://ericawithac.github.io/des157b/capstone/development/version2/location/the-big-bike.html';
         }
         else {
             loc4Label.className = 'displayed';
@@ -224,7 +224,7 @@
         event.preventDefault();
         //TO ADD: Parse User location boolean true
         if (loc5Key.value.toLowerCase() === 'dome') {
-            window.location.href = 'http://127.0.0.1:5504/location/baggins-end-domes.html';
+            window.location.href = 'https://ericawithac.github.io/des157b/capstone/development/version2/location/baggins-end-domes.html';
         }
         else {
             loc5Label.className = 'displayed';

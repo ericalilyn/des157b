@@ -20,7 +20,7 @@
     // direct to main page
     navIcon.addEventListener('click', function(event) {
         event.preventDefault();
-        window.location.href = 'http://127.0.0.1:5504/index.html';
+        window.location.href = 'https://ericawithac.github.io/des157b/capstone/development/version2/index.html';
     });
 
     // show location gallery section
