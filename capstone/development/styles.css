@@ -41,11 +41,15 @@ h1 {
     margin-bottom: 20px;
 }
 
-p {
+p, li {
     font-family: 'Ysabeau';
     font-size: 18px;
     line-height: 1.5em;
 }
+
+/* ol {
+    margin-bottom: 35px;
+} */
 
 img {
     width: 500px;
