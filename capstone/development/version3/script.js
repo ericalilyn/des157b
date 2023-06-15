@@ -144,9 +144,11 @@ Parse.serverURL = 'https://parseapi.back4app.com/';
         event.preventDefault();
         if (nav.className === 'displayed' || nav.className === 'nav-closed') {
             nav.className = 'nav-opened';
+            mapDiv.className = 'removed';
         }
         else if (nav.className === 'nav-opened') {
             nav.className = 'nav-closed';
+            mapDiv.className = 'displayed';
         }
 
         nav.addEventListener('animationend', function(event) {
@@ -163,47 +165,57 @@ Parse.serverURL = 'https://parseapi.back4app.com/';
     // show and hide unlock screens for each location
     loc1Btn.addEventListener('click', function(event) {
         loc1Unlock.className = 'unlock displayed';
+        mapDiv.className = 'removed';
     });
     loc1Back.addEventListener('click', function(event) {
         loc1Unlock.className = 'unlock removed';
         loc1Key.value = '';
         loc1Label.className = 'removed';
+        mapDiv.className = 'displayed';
     });
 
     loc2Btn.addEventListener('click', function(event) {
         loc2Unlock.className = 'unlock displayed';
+        mapDiv.className = 'removed';
     });
     loc2Back.addEventListener('click', function(event) {
         loc2Unlock.className = 'unlock removed';
         loc2Key.value = '';
         loc2Label.className = 'removed';
+        mapDiv.className = 'displayed';
     });
 
     loc3Btn.addEventListener('click', function(event) {
         loc3Unlock.className = 'unlock displayed';
+        mapDiv.className = 'removed';
     });
     loc3Back.addEventListener('click', function(event) {
         loc3Unlock.className = 'unlock removed';
         loc3Key.value = '';
         loc3Label.className = 'removed';
+        mapDiv.className = 'displayed';
     });
 
     loc4Btn.addEventListener('click', function(event) {
         loc4Unlock.className = 'unlock displayed';
+        mapDiv.className = 'removed';
     });
     loc4Back.addEventListener('click', function(event) {
         loc4Unlock.className = 'unlock removed';
         loc4Key.value = '';
         loc4Label.className = 'removed';
+        mapDiv.className = 'displayed';
     });
 
     loc5Btn.addEventListener('click', function(event) {
         loc5Unlock.className = 'unlock displayed';
+        mapDiv.className = 'removed';
     });
     loc5Back.addEventListener('click', function(event) {
         loc5Unlock.className = 'unlock removed';
         loc5Key.value = '';
         loc5Label.className = 'removed';
+        mapDiv.className = 'displayed';
     });
 
     // direct to each location page
