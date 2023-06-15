@@ -111,6 +111,7 @@ Parse.serverURL = 'https://parseapi.back4app.com/';
         event.preventDefault();
         startScreen.className = 'hidden';
         signinScreen.className = 'showing';
+        mapDiv.className = 'removed';
     });
 
     aboutIcon.addEventListener('click', function(event) {
