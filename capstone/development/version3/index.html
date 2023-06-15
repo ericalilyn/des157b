@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photohistory</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700&display=swap" rel="stylesheet">    
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+    
+    <link href="styles.css" rel="stylesheet">
+    
+    <!-- Leaflet Library -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+    <!-- Parse Library -->
+    <script src="https://npmcdn.com/parse/dist/parse.min.js"></script>
+    
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="displayed">
+        <h1>「 Photohistory 」</h1>
+        <i class="fas fa-bars"></i>
+    </header>
+    <div id="map" class="displayed"></div>
+    <nav class="displayed">
+        <div id="loc-list">
+            <div id="loc1">
+                <i class="fas fa-map-marker-alt"></i>
+                <h2>Location #1</h2>
+                <button class="displayed">UNLOCK</button>
+            </div>
+            <div id="loc2">
+                <i class="fas fa-map-marker-alt"></i>
+                <h2>Location #2</h2>
+                <button class="displayed">UNLOCK</button>
+            </div>
+            <div id="loc3">
+                <i class="fas fa-map-marker-alt"></i>
+                <h2>Location #3</h2>
+                <button class="displayed">UNLOCK</button>
+            </div>
+            <div id="loc4">
+                <i class="fas fa-map-marker-alt"></i>
+                <h2>Location #4</h2>
+                <button class="displayed">UNLOCK</button>
+            </div>
+            <div id="loc5">
+                <i class="fas fa-map-marker-alt"></i>
+                <h2>Location #5</h2>
+                <button class="displayed">UNLOCK</button>
+            </div>
+            <p id="signedin-display">Signed in: <span id="username-display"></span></p>
+        </div>
+    </nav>
+    <div id="loc1-unlock" class="unlock removed">
+        <button>Back</button>
+        <div class="form-prompt">
+            <h2>Location #1</h2>
+            <p>Find the archway sculpture at the entrance of this location<br><span>What tool is the sculpture made up of?</span></p>
+        </div>
+        <form class="form-inputs">
+            <input type="text" class="textbox" id="loc1key" name="loc1key" placeholder="Answer">
+            <input type="submit" value="ENTER">
+            <label class="removed" for="loc1key">Answer is incorrect. Try again!</label>
+        </form>
+    </div>
+    <div id="loc2-unlock" class="unlock removed">
+        <button>Back</button>
+        <div class="form-prompt">
+            <h2>Location #2</h2>
+            <p>Take a look at the weather vane on the tower in the front of this location<br><span>What animal is displayed at the top?</span></p>
+        </div>
+        <form class="form-inputs">
+            <input type="text" class="textbox" id="loc2key" name="loc2key" placeholder="Answer">
+            <input type="submit" value="ENTER">
+            <label class="removed" for="loc2key">Answer is incorrect. Try again!</label>
+        </form>
+    </div>
+    <div id="loc3-unlock" class="unlock removed">
+        <button>Back</button>
+        <div class="form-prompt">
+            <h2>Location #3</h2>
+            <p>Find the bike speed limit sign at this location<br><span>What number is labeled on the sign?</span></p>
+        </div>
+        <form class="form-inputs">
+            <input type="text" class="textbox" id="loc3key" name="loc3key" placeholder="Answer">
+            <input type="submit" value="ENTER">
+            <label class="removed" for="loc3key">Answer is incorrect. Try again!</label>
+        </form>
+    </div>
+    <div id="loc4-unlock" class="unlock removed">
+        <button>Back</button>
+        <div class="form-prompt">
+            <h2>Location #4</h2>
+            <p>Carefully observe the sculpture near the intersection at this location<br><span>What type of object is the sculpture?</span></p>
+        </div>
+        <form class="form-inputs">
+            <input type="text" class="textbox" id="loc4key" name="loc4key" placeholder="Answer">
+            <input type="submit" value="ENTER">
+            <label class="removed" for="loc4key">Answer is incorrect. Try again!</label>
+        </form>
+    </div>
+    <div id="loc5-unlock" class="unlock removed">
+        <button>Back</button>
+        <div class="form-prompt">
+            <h2>Location #5</h2>
+            <p>Survey this location from the sidewalk (do not enter the property)<br><span>What is the shape of the homes here?</span></p>
+        </div>
+        <form class="form-inputs">
+            <input type="text" class="textbox" id="loc5key" name="loc5key" placeholder="Answer">
+            <input type="submit" value="ENTER">
+            <label class="removed" for="loc5key">Answer is incorrect. Try again!</label>
+        </form>
+    </div>
+    <div id="start" class="showing">
+        <h1><span>Welcome to</span><br>Photohistory</h1>
+        <h2>Survey of the Davis Bike Loop</h2>
+        <button id="start-btn">START</button>
+        <i class="far fa-question-circle"></i>
+    </div>
+    <div id="about" class="hidden">
+        <p>Photohistory is a Davis community rephotographic survey project focused on locations of interest along the Davis Bike Loop.<br><br>Embark on a scavenger hunt to find each site and answer location specific prompts to unlock the history and photos associated with these Davis landmarks. Hint: Each prompt is designed to be answered in one word.<br><br>Have fun!</p>    
+    </div>
+    <div id="sign-in" class="hidden">
+        <div class="form-prompt">
+            <h2>Sign In</h2>
+            <p>First time? Enter in your name.<br><span>Returning? Use the same username.</span></p>
+        </div>
+        <form class="form-inputs">
+            <input type="text" class="textbox" id="username" name="username" placeholder="Name">
+            <input type="submit" id="usersubmit" value="NEXT">
+            <label class="removed" for="username">Please enter in a name.</label>
+        </form>
+    </div>
+</body>
+</html>

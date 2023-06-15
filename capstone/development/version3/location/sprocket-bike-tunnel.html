@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photohistory</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700&display=swap" rel="stylesheet">    
+
+    <link href="location.css" rel="stylesheet">
+
+    <!-- Parse Library -->
+    <script src="https://npmcdn.com/parse/dist/parse.min.js"></script>
+    <!-- Jimp Library -->
+    <script src="https://unpkg.com/jimp@0.14.0/browser/lib/jimp.js"></script>
+    <script src="location.js" defer></script>
+</head>
+<body>
+    <header class="displayed">
+        <h1>「 Photohistory 」</h1>
+        <i class="fas fa-map-location-dot" onclick="location.href='../index.html'"></i>
+    </header>
+    <div id="location-name" class="displayed withmargin">
+        <i class="fas fa-map-marker-alt"></i>
+        <h2>Sprocket Bike Tunnel</h2>
+    </div>
+    <div id="location-figure" class="displayed">
+        <img class="portrait" src="../images/tunnel.jpg" alt="Rephoto of Sprocket Bike Tunnel">
+        <p id="figcaption">Rephoto of <a href="https://www.reddit.com/r/UCDavis/comments/xjbkxn/before_and_after_the_segundo_tunnel/">Photo by Nik Wazowski (2022)</a></p>
+    </div>
+    <div id="location-history" class="displayed">
+        <p id="description" style="padding-bottom: 125px">The <strong>Sprocket Bike Tunnel</strong> is located under La Rue Road along the Sprocket Bikeway and connects campus to West Davis. The downward slope into the tunnel offers a fun boost in speed for bicyclists. Due to its lower elevation, the tunnel is prone to being flooded in the heavy rain season.</p>
+        <h3>Be a Part of <span>Photohistory</span></h3>
+        <p id="instructions">Share your photos/rephotos of the Sprocket Bike Tunnel and include any fun facts or history you know about this location.</p>
+        <button>VIEW COMMUNITY PHOTOS</button>
+    </div>
+    <div id="location-gallery" class="removed">
+        <div id="heading">
+            <h3>Community Photos</h3>
+            <button id="add-btn">+ ADD</button>
+        </div>
+        <div class="row">
+            <p id="no-photos" class="removed">There are no photos here yet</p>
+            <div class="column">
+
+            </div>
+            <div class="column">
+                
+            </div>
+        </div>
+    </div>
+    <div id="location-post" class="removed">
+        <div>
+            <h3></h3>
+            <i class="fas fa-times"></i>
+        </div>
+        <figure>
+            <img src="#" alt="#">
+        </figure>
+        <p></p>
+    </div>
+    <div id="add-photo" class="removed">
+        <button>Back</button>
+        <div id="form-prompt">
+            <h2>Share Your Photohistory</h2>
+            <p>Your submission will be added to the community photo gallery after review!</p>
+        </div>
+        <form id="form-inputs">      
+            <label for="name">Your Name</label>
+            <input type="text" class="textbox" id="name" name="name">
+
+            <label for="caption">Photo Caption</label>
+            <input type="text" class="textbox" id="caption" name="caption">
+            
+            <label for="imgfile">Photo Upload</label>
+            <input type="file" id="imgfile" name="imgfile">
+
+            <input type="hidden" id="location-id" value="loc3-tunnel">
+            <input type="submit" value="ADD">
+        </form>
+    </div>
+</body>
+</html>
