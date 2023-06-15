@@ -151,6 +151,7 @@ button, .unlock button, #start-btn, input[type="submit"] {
     color: #E2B100;
     text-align: center;
     width: 100vw;
+    overflow: hidden;
 }
 
 #start h1 {
@@ -183,7 +184,7 @@ button, .unlock button, #start-btn, input[type="submit"] {
 
 .fa-question-circle {
     color: white;
-    margin-top: 90vh;
+    margin-top: 82vh;
 }
 
 #about, .form-prompt {
