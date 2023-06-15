@@ -170,6 +170,7 @@ button, .unlock button, #start-btn, input[type="submit"] {
 #start h2 {
     font-weight: 600;
     font-size: 18px;
+    width: 300px;
     top: 27%;
 }
 
@@ -199,7 +200,7 @@ button, .unlock button, #start-btn, input[type="submit"] {
 
 #about {
     line-height: 1.25em;
-    top: 65vh;
+    top: 57vh;
     height: 300px;
     z-index: 4;
 }
