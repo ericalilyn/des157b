@@ -11,7 +11,7 @@ body {
     height: 100vh;
 }
 
-header, #location-name, #location-history, figcaption {
+header, #location-name, #location-history, #figcaption {
     background-color: white;
     width: 100vw;
 }
@@ -73,7 +73,7 @@ header h1 {
     height: 515px;
 }
 
-#location-figure img, figcaption {
+#location-figure img, #figcaption {
     position: absolute;
 }
 
@@ -81,9 +81,9 @@ header h1 {
     width: 100vw;
 }
 
-.landscape {
+/* .landscape {
     height: 515px;
-}
+} */
 
 #loc5before {
     left: -43%;
@@ -93,18 +93,18 @@ header h1 {
     left: -25%;
 }
 
-figcaption, a {
+#figcaption, a {
     font-weight: 500;
 }
 
-figcaption {
+#figcaption {
     background-color: #43434393;
     color: white;
-    bottom: 0;
+    bottom: -17px;
     padding: 5px;
 }
 
-figcaption a, figcaption a:visited {
+#figcaption a, #figcaption a:visited {
     color: #00B897;
 }
 
@@ -113,7 +113,7 @@ figcaption a, figcaption a:visited {
     height: 90vh;
 }
 
-#location-history p, #location-history h3, #location-history button, #location-gallery, #no-photos, #location-post div, #location-post img, #location-post p, #add-photo, #form-prompt, #form-prompt h2, #form-prompt p, #form-inputs, #form-inputs input {
+#location-history p, #location-history h3, #location-history button, #location-gallery, #no-photos, .post div, .post img, .post p, #add-photo, #form-prompt, #form-prompt h2, #form-prompt p, #form-inputs, #form-inputs input {
     position: relative;
     transform: translate(-50%, -50%);
     left: 50%;
@@ -129,6 +129,11 @@ figcaption a, figcaption a:visited {
     margin-top: 41.5%;
     position: relative;
     top: 10px;
+}
+
+#links {
+    position: relative;
+    top: 20px;
 }
 
 #location-history h3 {
@@ -230,11 +235,11 @@ button, input[type="submit"] {
     width: 100%;
 }
 
-#location-post {
+.post {
     height: auto;
 }
 
-#location-post div {
+.post div {
     display: flex;
     justify-content: space-between;
     position: relative;
@@ -242,7 +247,7 @@ button, input[type="submit"] {
     padding-top: 25px;
 }
 
-#location-post h3 {
+.post h3 {
     color:#E2B100
 }
 
@@ -250,16 +255,16 @@ button, input[type="submit"] {
     margin-top: 15px;
 }
 
-#location-post figure {
+.post figure {
     position: relative;
     top: 100px; 
 }
 
-#location-post p {
+.post p {
     font-weight: 500;
 }
 
-#location-post div,#location-post img, #location-post p {
+.post div, .post img, .post p {
     width: 80vw;
 }
 

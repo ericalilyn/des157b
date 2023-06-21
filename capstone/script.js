@@ -1,3 +1,6 @@
+Parse.initialize("rWC0HUiG9YuvLApeDHeRz9ttz3lCXDLdU7caKs8P","GQCP2oGKxBzbC4S0uvdR5UF1YU6lhXm4I8LS4MDh");
+Parse.serverURL = 'https://parseapi.back4app.com/';
+
 (function(){
     'use strict';
 
@@ -58,6 +61,14 @@
     // sign in screen variables
     const signinScreen = document.querySelector('#sign-in');
     const signinForm = document.querySelector('#sign-in form');
+    const signInLabel = document.querySelector('label[for="username"]');
+    // user setup variables
+    let usernameValue;
+    let loc1Unlocked;
+    let loc2Unlocked;
+    let loc3Unlocked;
+    let loc4Unlocked;
+    let loc5Unlocked;
 
     // leaflet map setup
     var map = L.map('map').setView([38.540000, -121.755000], 14);
@@ -67,32 +78,32 @@
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(map);
 
-    const gold = "hue-rotate(185deg)";
-    const green = "hue-rotate(-60deg)";
-    const gray = "grayscale(1)";
+    const gold = 'hue-rotate(185deg)';
+    const green = 'hue-rotate(-60deg)';
+    const gray = 'grayscale(1)';
 
     var loc1Marker = L.marker([38.540415, -121.741697]).addTo(map);
-    loc1Marker.bindPopup("Location #1");
+    loc1Marker.bindPopup('Location #1');
     loc1Marker._icon.style.filter = gray;
 
     var loc2Marker = L.marker([38.538850, -121.752870]).addTo(map);
-    loc2Marker.bindPopup("Location #2");
+    loc2Marker.bindPopup('Location #2');
     loc2Marker._icon.style.filter = gray;
 
     var loc3Marker = L.marker([38.544555, -121.759730]).addTo(map);
-    loc3Marker.bindPopup("Location #3");
+    loc3Marker.bindPopup('Location #3');
     loc3Marker._icon.style.filter = gray;
 
     var loc4Marker = L.marker([38.546330, -121.759578]).addTo(map);
-    loc4Marker.bindPopup("Location #4");
+    loc4Marker.bindPopup('Location #4');
     loc4Marker._icon.style.filter = gray;
 
     var loc5Marker = L.marker([38.543700, -121.764300]).addTo(map);
-    loc5Marker.bindPopup("Location #5");
+    loc5Marker.bindPopup('Location #5');
     loc5Marker._icon.style.filter = gray;
 
     var startMarker = L.marker([38.543150, -121.740700]).addTo(map);
-    startMarker.bindPopup("Davis Centennial Seal").openPopup();
+    startMarker.bindPopup('Davis Centennial Seal').openPopup();
     startMarker._icon.style.filter = gold;
 
     // show sign in screen 
@@ -115,9 +126,17 @@
     // create new user and show map screen
     signinForm.addEventListener('submit', function (event) {
         event.preventDefault();
-        //TO ADD: Parse User added
-        console.log('user added');
-        signinScreen.className = 'hidden';
+        //Parse User add
+        const usernameInput = document.querySelector('#username');
+        if (usernameInput.value.length > 0) {
+            usernameValue = usernameInput.value;
+            uploadData(usernameValue, loc1Unlocked, loc2Unlocked, loc3Unlocked, loc4Unlocked, loc5Unlocked);
+            signinScreen.className = 'hidden';
+        }
+        else if (usernameInput.value.length === 0) {
+            signInLabel.className = 'displayed with-fade';
+            setInterval(restartAnimation, 1500);
+        }
     });
 
     // show location list 
@@ -128,12 +147,14 @@
         }
         else if (nav.className === 'nav-opened') {
             nav.className = 'nav-closed';
+            mapDiv.className = 'displayed';
         }
 
         nav.addEventListener('animationend', function(event) {
             event.preventDefault();
             if (nav.className === 'nav-opened') {
                 nav.style.top = '50%';
+                mapDiv.className = 'removed';
             }
             else if (nav.className === 'nav-closed') {
                 nav.style.top = '-50%';
@@ -190,56 +211,183 @@
     // direct to each location page
     loc1Form.addEventListener('submit', function (event) {
         event.preventDefault();
-        //TO ADD: Parse User location boolean true
+        // unlock location 1
         if (loc1Key.value.toLowerCase() === 'shovel') {
-            window.location.href = 'https://ericawithac.github.io/des157b/capstone/location/arboretum-gateway-garden.html';
+            loc1Unlocked = true;
+            displayLoc1();
+            window.open('https://ericawithac.github.io/des157b/capstone/development/location/arboretum-gateway-garden.html', '_blank');
         }
         else {
-            loc1Label.className = 'displayed';
+            loc1Label.className = 'displayed with-fade';
+            setInterval(restartAnimation, 1500);
         }
     });
 
     loc2Form.addEventListener('submit', function (event) {
         event.preventDefault();
-        //TO ADD: Parse User location boolean true
+    // unlock location 2
         if (loc2Key.value.toLowerCase() === 'cow') {
-            window.location.href = 'https://ericawithac.github.io/des157b/capstone/location/the-silo.html';
+            loc2Unlocked = true;
+            displayLoc2();
+            window.open('https://ericawithac.github.io/des157b/capstone/development/location/the-silo.html', '_blank');
         }
         else {
-            loc2Label.className = 'displayed';
+            loc2Label.className = 'displayed with-fade';
+            setInterval(restartAnimation, 1500);
         }
     });
 
     loc3Form.addEventListener('submit', function (event) {
         event.preventDefault();
-        //TO ADD: Parse User location boolean true
+        // unlock location 3
         if (loc3Key.value.toLowerCase() === '10' || loc3Key.value.toLowerCase() === 'ten') {
-            window.location.href = 'https://ericawithac.github.io/des157b/capstone/location/sprocket-bike-tunnel.html';
+            loc3Unlocked = true;
+            displayLoc3();
+            window.open('https://ericawithac.github.io/des157b/capstone/development/location/sprocket-bike-tunnel.html', '_blank');
         }
         else {
-            loc3Label.className = 'displayed';
+            loc3Label.className = 'displayed with-fade';
+            setInterval(restartAnimation, 1500);
         }
     });
 
     loc4Form.addEventListener('submit', function (event) {
         event.preventDefault();
-        //TO ADD: Parse User location boolean true
+        // unlock location 4
         if (loc4Key.value.toLowerCase() === 'bike' || loc3Key.value.toLowerCase() === 'bicycle') {
-            window.location.href = 'https://ericawithac.github.io/des157b/capstone/location/the-big-bike.html';
+            loc4Unlocked = true;
+            displayLoc4();
+            window.open('https://ericawithac.github.io/des157b/capstone/development/location/the-big-bike.html', '_blank');
         }
         else {
-            loc4Label.className = 'displayed';
+            loc4Label.className = 'displayed with-fade';
+            setInterval(restartAnimation, 1500);
         }
     });
 
     loc5Form.addEventListener('submit', function (event) {
         event.preventDefault();
-        //TO ADD: Parse User location boolean true
+        // unlock location 5
         if (loc5Key.value.toLowerCase() === 'dome') {
-            window.location.href = 'https://ericawithac.github.io/des157b/capstone/location/baggins-end-domes.html';
+            loc5Unlocked = true;
+            displayLoc5();
+            window.open('https://ericawithac.github.io/des157b/capstone/development/location/baggins-end-domes.html', '_blank');
         }
         else {
-            loc5Label.className = 'displayed';
+            loc5Label.className = 'displayed with-fade';
+            setInterval(restartAnimation, 1500);
         }
     });
+
+    function displayLoc1() {
+        if (loc1Unlocked === true) {
+            loc1Marker._icon.style.filter = green;
+            loc1Marker.bindPopup('Arboretum GATEway Garden');
+            loc1Icon.style.color = '#009B7F';
+            loc1Name.style.color = '#009B7F';
+            loc1Name.style.left = '-47px';
+            loc1Name.innerHTML = 'Arboretum GATEway Garden';
+            loc1Btn.className = 'removed';
+            loc1Unlock.className = 'unlock removed';
+
+            loc1Name.addEventListener('click', function (event) {
+                window.open('https://ericawithac.github.io/des157b/capstone/development/location/arboretum-gateway-garden.html', '_blank');
+            });
+        }
+    }
+
+    function displayLoc2() {
+        if (loc2Unlocked === true) {
+            loc2Marker._icon.style.filter = green;
+            loc2Marker.bindPopup('The Silo');
+            loc2Icon.style.color = '#009B7F';
+            loc2Name.style.color = '#009B7F';
+            loc2Name.style.left = '-225px';
+            loc2Name.innerHTML = 'The Silo';
+            loc2Btn.className = 'removed';
+            loc2Unlock.className = 'unlock removed';
+
+            loc2Name.addEventListener('click', function (event) {
+                window.open('https://ericawithac.github.io/des157b/capstone/development/location/the-silo.html', '_blank');
+            });
+        }
+    }
+
+    function displayLoc3() {
+        if (loc3Unlocked === true) {
+            loc3Marker._icon.style.filter = green;
+            loc3Marker.bindPopup('Sprocket Bike Tunnel');
+            loc3Icon.style.color = '#009B7F';
+            loc3Name.style.color = '#009B7F';
+            loc3Name.style.left = '-110px';
+            loc3Name.innerHTML = 'Sprocket Bike Tunnel';
+            loc3Btn.className = 'removed';
+            loc3Unlock.className = 'unlock removed';
+
+            loc3Name.addEventListener('click', function (event) {
+                window.open('https://ericawithac.github.io/des157b/capstone/development/location/sprocket-bike-tunnel.html', '_blank');
+            });
+        }
+    }
+
+    function displayLoc4() {
+        if (loc4Unlocked === true) {
+            loc4Marker._icon.style.filter = green;
+            loc4Marker.bindPopup('The Big Bike');
+            loc4Icon.style.color = '#009B7F';
+            loc4Name.style.color = '#009B7F';
+            loc4Name.style.left = '-187px';
+            loc4Name.innerHTML = 'The Big Bike';
+            loc4Btn.className = 'removed';
+            loc4Unlock.className = 'unlock removed';
+
+            loc4Name.addEventListener('click', function (event) {
+                window.open('https://ericawithac.github.io/des157b/capstone/development/location/the-big-bike.html', '_blank');
+            });
+        }
+    }
+
+    function displayLoc5() {
+        if (loc5Unlocked === true) {
+            loc5Marker._icon.style.filter = green;
+            loc5Marker.bindPopup('Baggins End Domes');
+            loc5Icon.style.color = '#009B7F';
+            loc5Name.style.color = '#009B7F';
+            loc5Name.style.left = '-122px';
+            loc5Name.innerHTML = 'Baggins End Domes';
+            loc5Btn.className = 'removed';
+            loc5Unlock.className = 'unlock removed';
+
+            loc5Name.addEventListener('click', function (event) {
+                window.open('https://ericawithac.github.io/des157b/capstone/development/location/baggins-end-domes.html', '_blank');
+            });
+        }
+    }
+
+    function restartAnimation() {
+        signInLabel.classList.remove('with-fade');
+        loc1Label.classList.remove('with-fade');
+        loc2Label.classList.remove('with-fade');
+        loc3Label.classList.remove('with-fade');
+        loc4Label.classList.remove('with-fade');
+        loc5Label.classList.remove('with-fade');
+    }
+
+    async function uploadData(user, loc1Boolean, loc2Boolean, loc3Boolean, loc4Boolean, loc5Boolean) {
+        const newObject = new Parse.Object('Users');
+        newObject.set('username', user);
+        newObject.set('loc1unlocked', loc1Boolean);
+        newObject.set('loc2unlocked', loc2Boolean);
+        newObject.set('loc3unlocked', loc3Boolean);
+        newObject.set('loc4unlocked', loc4Boolean);
+        newObject.set('loc5unlocked', loc5Boolean);
+
+        try {
+            const result = await newObject.save();
+            userDisplay.innerHTML = `${user}`;
+        }
+        catch (error) {
+            console.error('Error while creating photo: ', error);
+        }
+    }
 }());

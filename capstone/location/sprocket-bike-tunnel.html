@@ -11,6 +11,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700&display=swap" rel="stylesheet">    
 
     <link href="location.css" rel="stylesheet">
+
+    <!-- Parse Library -->
+    <script src="https://npmcdn.com/parse/dist/parse.min.js"></script>
+    <!-- Jimp Library -->
+    <script src="https://unpkg.com/jimp@0.14.0/browser/lib/jimp.js"></script>
     <script src="location.js" defer></script>
 </head>
 <body>
@@ -23,8 +28,8 @@
         <h2>Sprocket Bike Tunnel</h2>
     </div>
     <div id="location-figure" class="displayed">
-        <img class="portrait" src="../images/tunnel.jpg">
-        <figcaption>Rephoto of <a href="https://www.reddit.com/r/UCDavis/comments/xjbkxn/before_and_after_the_segundo_tunnel/">Photo by Nik Wazowski (2022)</a></figcaption>
+        <img class="portrait" src="../images/tunnel.jpg" alt="Rephoto of Sprocket Bike Tunnel">
+        <p id="figcaption">Rephoto of <a href="https://www.reddit.com/r/UCDavis/comments/xjbkxn/before_and_after_the_segundo_tunnel/">Photo by Nik Wazowski (2022)</a></p>
     </div>
     <div id="location-history" class="displayed">
         <p id="description" style="padding-bottom: 125px">The <strong>Sprocket Bike Tunnel</strong> is located under La Rue Road along the Sprocket Bikeway and connects campus to West Davis. The downward slope into the tunnel offers a fun boost in speed for bicyclists. Due to its lower elevation, the tunnel is prone to being flooded in the heavy rain season.</p>
@@ -35,7 +40,7 @@
     <div id="location-gallery" class="removed">
         <div id="heading">
             <h3>Community Photos</h3>
-            <button id="add-btn">+ ADD</button>
+            <button id="add-btn">ADD</button>
         </div>
         <div class="row">
             <p id="no-photos" class="removed">There are no photos here yet</p>
@@ -61,7 +66,7 @@
         <button>Back</button>
         <div id="form-prompt">
             <h2>Share Your Photohistory</h2>
-            <p>Join the community survey of the history along the Davis Bike Loop</p>
+            <p>Your submission will be added to the community photo gallery after review!</p>
         </div>
         <form id="form-inputs">      
             <label for="name">Your Name</label>
@@ -73,6 +78,7 @@
             <label for="imgfile">Photo Upload</label>
             <input type="file" id="imgfile" name="imgfile">
 
+            <input type="hidden" id="location-id" value="loc3-tunnel">
             <input type="submit" value="ADD">
         </form>
     </div>

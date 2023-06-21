@@ -11,6 +11,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700&display=swap" rel="stylesheet">    
 
     <link href="location.css" rel="stylesheet">
+
+    <!-- Parse Library -->
+    <script src="https://npmcdn.com/parse/dist/parse.min.js"></script>
+    <!-- Jimp Library -->
+    <script src="https://unpkg.com/jimp@0.14.0/browser/lib/jimp.js"></script>
     <script src="location.js" defer></script>
 </head>
 <body>
@@ -23,11 +28,11 @@
         <h2>Arboretum GATEway Garden</h2>
     </div>
     <div id="location-figure" class="displayed">
-        <img class="portrait" src="../images/gateway.jpg">
-        <figcaption>Rephoto of <a href="https://www.flickr.com/photos/goodlifegarden/34806723063/in/album-72157632927003568/">Photo by Katie Hetrick (2015)</a></figcaption>
+        <img class="portrait" src="../images/gateway.jpg" alt="Rephoto of Arboretum GATEway Garden">
+        <p id="figcaption">Rephoto of <a href="https://www.flickr.com/photos/goodlifegarden/34806723063/in/album-72157632927003568/">Photo by Katie Hetrick (2015)</a></p>
     </div>
     <div id="location-history" class="displayed">
-        <p id="description">The <strong>Arboretum GATEway Garden</strong> serves as the entrance to the UC Davis Arboretum and connects the campus to downtown Davis. Built in 2014, the garden showcases native plants and bioswales to protect water quality, as well as a bike tunnel mural and art installations. According to the <a href="https://arboretum.ucdavis.edu/arboretum-gateway-garden">UC Davis Arboretum and Public Garden website</a>, the Shovel Gateway sculpture welcomes visitors in and "dovetails with city and campus goals to improve pedestrian and bicycle connections and to promote the campus and downtown area as an arts destination."</p>
+        <p id="description">The <strong>Arboretum GATEway Garden</strong> serves as the entrance to the UC Davis Arboretum and connects the campus to downtown Davis. Built in 2014, the garden showcases native plants and bioswales to protect water quality, as well as a bike tunnel mural and art installations. According to the <a href="https://arboretum.ucdavis.edu/arboretum-gateway-garden">UC Davis Arboretum and Public Garden</a>, the Shovel Gateway sculpture welcomes visitors in and "dovetails with city and campus goals to improve pedestrian and bicycle connections and to promote the campus and downtown area as an arts destination."</p>
         <h3>Be a Part of <span>Photohistory</span></h3>
         <p id="instructions">Share your photos/rephotos of the Arboretum GATEway Garden and include any fun facts or history you know about this location.</p>
         <button>VIEW COMMUNITY PHOTOS</button>
@@ -35,33 +40,26 @@
     <div id="location-gallery" class="removed">
         <div id="heading">
             <h3>Community Photos</h3>
-            <button id="add-btn">+ ADD</button>
+            <button id="add-btn">ADD</button>
         </div>
         <div class="row">
             <p id="no-photos" class="removed">There are no photos here yet</p>
             <div class="column">
-
+                
             </div>
             <div class="column">
                 
             </div>
         </div>
     </div>
-    <div id="location-post" class="removed">
-        <div>
-            <h3></h3>
-            <i class="fas fa-times"></i>
-        </div>
-        <figure>
-            <img src="#" alt="#">
-        </figure>
-        <p></p>
+    <div id="location-post" class="removed"> 
+        
     </div>
     <div id="add-photo" class="removed">
         <button>Back</button>
         <div id="form-prompt">
             <h2>Share Your Photohistory</h2>
-            <p>Join the community survey of the history along the Davis Bike Loop</p>
+            <p>Your submission will be added to the community photo gallery after review!</p>
         </div>
         <form id="form-inputs">      
             <label for="name">Your Name</label>
@@ -73,6 +71,7 @@
             <label for="imgfile">Photo Upload</label>
             <input type="file" id="imgfile" name="imgfile">
 
+            <input type="hidden" id="location-id" value="loc1-arboretum">
             <input type="submit" value="ADD">
         </form>
     </div>
