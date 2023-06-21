@@ -27,7 +27,7 @@ Parse.serverURL = 'https://parseapi.back4app.com/';
     // direct to main page
     navIcon.addEventListener('click', function(event) {
         event.preventDefault();
-        window.location.href = 'https://ericawithac.github.io/des157b/capstone/development/version2/index.html';
+        window.location.href = 'https://ericawithac.github.io/des157b/capstone/development/version3/index.html';
     });
 
     // show location gallery section
