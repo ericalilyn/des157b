@@ -215,7 +215,7 @@ Parse.serverURL = 'https://parseapi.back4app.com/';
         if (loc1Key.value.toLowerCase() === 'shovel') {
             loc1Unlocked = true;
             displayLoc1();
-            window.open('https://ericawithac.github.io/des157b/capstone/development/location/arboretum-gateway-garden.html', '_blank');
+            window.open('https://ericawithac.github.io/des157b/capstone/location/arboretum-gateway-garden.html', '_blank');
         }
         else {
             loc1Label.className = 'displayed with-fade';
@@ -229,7 +229,7 @@ Parse.serverURL = 'https://parseapi.back4app.com/';
         if (loc2Key.value.toLowerCase() === 'cow') {
             loc2Unlocked = true;
             displayLoc2();
-            window.open('https://ericawithac.github.io/des157b/capstone/development/location/the-silo.html', '_blank');
+            window.open('https://ericawithac.github.io/des157b/capstone/location/the-silo.html', '_blank');
         }
         else {
             loc2Label.className = 'displayed with-fade';
@@ -243,7 +243,7 @@ Parse.serverURL = 'https://parseapi.back4app.com/';
         if (loc3Key.value.toLowerCase() === '10' || loc3Key.value.toLowerCase() === 'ten') {
             loc3Unlocked = true;
             displayLoc3();
-            window.open('https://ericawithac.github.io/des157b/capstone/development/location/sprocket-bike-tunnel.html', '_blank');
+            window.open('https://ericawithac.github.io/des157b/capstone/location/sprocket-bike-tunnel.html', '_blank');
         }
         else {
             loc3Label.className = 'displayed with-fade';
@@ -257,7 +257,7 @@ Parse.serverURL = 'https://parseapi.back4app.com/';
         if (loc4Key.value.toLowerCase() === 'bike' || loc3Key.value.toLowerCase() === 'bicycle') {
             loc4Unlocked = true;
             displayLoc4();
-            window.open('https://ericawithac.github.io/des157b/capstone/development/location/the-big-bike.html', '_blank');
+            window.open('https://ericawithac.github.io/des157b/capstone/location/the-big-bike.html', '_blank');
         }
         else {
             loc4Label.className = 'displayed with-fade';
@@ -271,7 +271,7 @@ Parse.serverURL = 'https://parseapi.back4app.com/';
         if (loc5Key.value.toLowerCase() === 'dome') {
             loc5Unlocked = true;
             displayLoc5();
-            window.open('https://ericawithac.github.io/des157b/capstone/development/location/baggins-end-domes.html', '_blank');
+            window.open('https://ericawithac.github.io/des157b/capstone/location/baggins-end-domes.html', '_blank');
         }
         else {
             loc5Label.className = 'displayed with-fade';
@@ -291,7 +291,7 @@ Parse.serverURL = 'https://parseapi.back4app.com/';
             loc1Unlock.className = 'unlock removed';
 
             loc1Name.addEventListener('click', function (event) {
-                window.open('https://ericawithac.github.io/des157b/capstone/development/location/arboretum-gateway-garden.html', '_blank');
+                window.open('https://ericawithac.github.io/des157b/capstone/location/arboretum-gateway-garden.html', '_blank');
             });
         }
     }
@@ -308,7 +308,7 @@ Parse.serverURL = 'https://parseapi.back4app.com/';
             loc2Unlock.className = 'unlock removed';
 
             loc2Name.addEventListener('click', function (event) {
-                window.open('https://ericawithac.github.io/des157b/capstone/development/location/the-silo.html', '_blank');
+                window.open('https://ericawithac.github.io/des157b/capstone/location/the-silo.html', '_blank');
             });
         }
     }
@@ -325,7 +325,7 @@ Parse.serverURL = 'https://parseapi.back4app.com/';
             loc3Unlock.className = 'unlock removed';
 
             loc3Name.addEventListener('click', function (event) {
-                window.open('https://ericawithac.github.io/des157b/capstone/development/location/sprocket-bike-tunnel.html', '_blank');
+                window.open('https://ericawithac.github.io/des157b/capstone/location/sprocket-bike-tunnel.html', '_blank');
             });
         }
     }
@@ -342,7 +342,7 @@ Parse.serverURL = 'https://parseapi.back4app.com/';
             loc4Unlock.className = 'unlock removed';
 
             loc4Name.addEventListener('click', function (event) {
-                window.open('https://ericawithac.github.io/des157b/capstone/development/location/the-big-bike.html', '_blank');
+                window.open('https://ericawithac.github.io/des157b/capstone/location/the-big-bike.html', '_blank');
             });
         }
     }
@@ -359,7 +359,7 @@ Parse.serverURL = 'https://parseapi.back4app.com/';
             loc5Unlock.className = 'unlock removed';
 
             loc5Name.addEventListener('click', function (event) {
-                window.open('https://ericawithac.github.io/des157b/capstone/development/location/baggins-end-domes.html', '_blank');
+                window.open('https://ericawithac.github.io/des157b/capstone/location/baggins-end-domes.html', '_blank');
             });
         }
     }
